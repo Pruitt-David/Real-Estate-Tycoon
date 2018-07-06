@@ -2,7 +2,7 @@ import sys
 import pygame
 import random
 
-width = 1900
+width = 1000
 height = 700
 
 screenDim = (width, height)
@@ -11,45 +11,45 @@ screen = pygame.display.set_mode(screenDim)
 
 pygame.display.set_caption("Random Grid")
 
-grassTile = pygame.image.load("grassTile.png").convert()
+grassTile = pygame.image.load("assets/img/grassTile.png").convert()
 
 roomLeft = False
 tileX = 3
 tileY = 3
 
 # Basic Tiles
-blankTile = pygame.image.load("grassTile.png").convert()
-PoorLowTile = pygame.image.load("LowAndPoor.png").convert()
-PoorMedTile = pygame.image.load("MedAndPoor.png").convert()
-PoorHighTile = pygame.image.load("HighAndPoor.png").convert()
-MedLowTile = pygame.image.load("LowAndMed.png").convert()
-MedMedTile = pygame.image.load("MedAndMed.png").convert()
-MedHighTile = pygame.image.load("HighAndMed.png").convert()
-RichLowTile = pygame.image.load("LowAndRich.png").convert()
-RichMedTile = pygame.image.load("MedAndRich.png").convert()
-RichHighTile = pygame.image.load("HighAndRich.png").convert()
+blankTile = pygame.image.load("assets/img/grassTile.png").convert()
+PoorLowTile = pygame.image.load("assets/img/LowAndPoor.png").convert()
+PoorMedTile = pygame.image.load("assets/img/MedAndPoor.png").convert()
+PoorHighTile = pygame.image.load("assets/img/HighAndPoor.png").convert()
+MedLowTile = pygame.image.load("assets/img/LowAndMed.png").convert()
+MedMedTile = pygame.image.load("assets/img/MedAndMed.png").convert()
+MedHighTile = pygame.image.load("assets/img/HighAndMed.png").convert()
+RichLowTile = pygame.image.load("assets/img/LowAndRich.png").convert()
+RichMedTile = pygame.image.load("assets/img/MedAndRich.png").convert()
+RichHighTile = pygame.image.load("assets/img/HighAndRich.png").convert()
 
 # Player Tiles
-PPoorLowTile = pygame.image.load("LowAndPoorPlayer.png").convert()
-PPoorMedTile = pygame.image.load("MedAndPoorPlayer.png").convert()
-PPoorHighTile = pygame.image.load("HighAndPoorPlayer.png").convert()
-PMedLowTile = pygame.image.load("LowAndMedPlayer.png").convert()
-PMedMedTile = pygame.image.load("MedAndMedPlayer.png").convert()
-PMedHighTile = pygame.image.load("HighAndMedPlayer.png").convert()
-PRichLowTile = pygame.image.load("LowAndRichPlayer.png").convert()
-PRichMedTile = pygame.image.load("MedAndRichPlayer.png").convert()
-PRichHighTile = pygame.image.load("HighAndRichPlayer.png").convert()
+PPoorLowTile = pygame.image.load("assets/img/LowAndPoorPlayer.png").convert()
+PPoorMedTile = pygame.image.load("assets/img/MedAndPoorPlayer.png").convert()
+PPoorHighTile = pygame.image.load("assets/img/HighAndPoorPlayer.png").convert()
+PMedLowTile = pygame.image.load("assets/img/LowAndMedPlayer.png").convert()
+PMedMedTile = pygame.image.load("assets/img/MedAndMedPlayer.png").convert()
+PMedHighTile = pygame.image.load("assets/img/HighAndMedPlayer.png").convert()
+PRichLowTile = pygame.image.load("assets/img/LowAndRichPlayer.png").convert()
+PRichMedTile = pygame.image.load("assets/img/MedAndRichPlayer.png").convert()
+PRichHighTile = pygame.image.load("assets/img/HighAndRichPlayer.png").convert()
 
 # Computer Opponet Tiles
-OPoorLowTile = pygame.image.load("LowAndPoorComp.png").convert()
-OPoorMedTile = pygame.image.load("MedAndPoorComp.png").convert()
-OPoorHighTile = pygame.image.load("HighAndPoorComp.png").convert()
-OMedLowTile = pygame.image.load("LowAndMedComp.png").convert()
-OMedMedTile = pygame.image.load("MedAndMedComp.png").convert()
-OMedHighTile = pygame.image.load("HighAndMedComp.png").convert()
-ORichLowTile = pygame.image.load("LowAndRichComp.png").convert()
-ORichMedTile = pygame.image.load("MedAndRichComp.png").convert()
-ORichHighTile = pygame.image.load("HighAndRichComp.png").convert()
+OPoorLowTile = pygame.image.load("assets/img/LowAndPoorComp.png").convert()
+OPoorMedTile = pygame.image.load("assets/img/MedAndPoorComp.png").convert()
+OPoorHighTile = pygame.image.load("assets/img/HighAndPoorComp.png").convert()
+OMedLowTile = pygame.image.load("assets/img/LowAndMedComp.png").convert()
+OMedMedTile = pygame.image.load("assets/img/MedAndMedComp.png").convert()
+OMedHighTile = pygame.image.load("assets/img/HighAndMedComp.png").convert()
+ORichLowTile = pygame.image.load("assets/img/LowAndRichComp.png").convert()
+ORichMedTile = pygame.image.load("assets/img/MedAndRichComp.png").convert()
+ORichHighTile = pygame.image.load("assets/img/HighAndRichComp.png").convert()
 
 
 tileList = [blankTile,
